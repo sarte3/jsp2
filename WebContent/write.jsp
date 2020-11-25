@@ -8,6 +8,8 @@
 </head>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
+
+
 $(function(){
 	$('#name').blur(function(){
 		if($(this).val().length<3||$(this).val().length>5){
@@ -16,15 +18,16 @@ $(function(){
 		}
 	})
 	
-	$('#age').keydown(function(e){
-		if(e.witch < 48 || e.witch > 57){
+	$('#age').keypress(function(e){
+		if(e.keyCode < 48 || e.keyCode > 57){
 			alert('나이는 숫자만 입력하세요');
 			return false;
+			
 		}
 	})
 	
 	$('#juso').blur(function(){
-		if($(this).val().length<=2){
+		if($(this).val().length<2){
 			alert('주소는 2자 이상입니다');
 		
 		}
