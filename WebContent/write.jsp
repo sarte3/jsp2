@@ -18,7 +18,15 @@ $(function(){
 	
 	$('#age').keydown(function(e){
 		if(e.witch < 48 || e.witch > 57){
-			alert('나이는 숫자만 입력하세요')
+			alert('나이는 숫자만 입력하세요');
+			return false;
+		}
+	})
+	
+	$('#juso').blur(function(){
+		if($(this).val().length<=2){
+			alert('주소는 2자 이상입니다');
+		
 		}
 	})
 	
